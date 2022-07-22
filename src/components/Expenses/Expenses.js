@@ -7,7 +7,6 @@ import "./Expenses.css";
 const Expenses = (props) => {
   const getFilteredItems = (oldItems, filterYear) => {
     return oldItems.filter(
-      // eslint-disable-next-line
       (eachItem) => eachItem.date.getFullYear() == filterYear
     );
   };
