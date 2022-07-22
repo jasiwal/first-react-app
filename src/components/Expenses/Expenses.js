@@ -5,11 +5,24 @@ import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 
 const Expenses = (props) => {
-  const [changedYear, setChangedYear] = useState(2021);
+  const getFilteredItems = (oldItems, filterYear) => {
+    return oldItems.filter(
+      // eslint-disable-next-line
+      (eachItem) => eachItem.date.getFullYear() == filterYear
+    );
+  };
+
+  const [changedYear, setChangedYear] = useState(2022);
+
+  const [expenseItems, setExpenseItems] = useState(
+    getFilteredItems(props.items, changedYear)
+  );
 
   const yearChangeHandlerForExpenses = (changedYearArg) => {
     setChangedYear(changedYearArg);
-    console.log(changedYear);
+
+    setExpenseItems(getFilteredItems(props.items, changedYearArg));
+    console.log(getFilteredItems(props.items, changedYearArg));
   };
 
   return (
@@ -19,7 +32,7 @@ const Expenses = (props) => {
           selected={changedYear}
           onYearChange={yearChangeHandlerForExpenses}
         />
-        {props.items.map((expense) => (
+        {expenseItems.map((expense) => (
           <ExpenseItem
             key={expense.id}
             title={expense.title}
