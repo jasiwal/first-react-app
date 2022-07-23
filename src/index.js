@@ -1,7 +1,5 @@
 import ReactDOM from "react-dom/client";
 
-import { initializeApp } from "firebase/app";
-
 import App from "./App";
 import "./index.css";
 
@@ -14,6 +12,7 @@ console.log("inside index.js");
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+/*
 const firebaseConfig = {
   apiKey: "AIzaSyDELAVpP-JN0Zla199KBjiS2JGKHvEYtSw",
   authDomain: "api-project-251300007723.firebaseapp.com",
@@ -26,3 +25,4 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+*/
