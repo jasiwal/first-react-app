@@ -1,4 +1,18 @@
+# Dependency directories
 node_modules
-.DS_Store
+
+# Optional eslint cache
 .eslintcache
+
+# mac
+.DS_Store
 *.icloud
+
+# production
+/build
+
+# Firebase cache
+.firebase
+
+# My custom extension for backup
+*.backup
