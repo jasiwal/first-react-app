@@ -13,6 +13,7 @@ node_modules
 
 # Firebase cache
 .firebase
+.firebase 2
 
 # My custom extension for backup
 *.backup
