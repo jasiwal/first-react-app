@@ -26,7 +26,7 @@ const NewExpense = (props) => {
   return (
     <div className="new-expense">
       {hideExpenseForm ? (
-        <button onClick={showExpenseFormHandler}>Add New Expense.</button>
+        <button onClick={showExpenseFormHandler}>ADD NEW EXPENSE</button>
       ) : (
         <ExpenseForm
           onSaveExpenseData={saveExpenseDataHandler}
