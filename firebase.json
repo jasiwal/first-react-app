@@ -2,6 +2,7 @@
   "hosting": {
     "site": "gaja",
     "public": "build",
+
     "ignore": [
       "firebase.json",
       "**/.*",
