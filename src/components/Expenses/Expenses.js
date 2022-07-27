@@ -3,11 +3,12 @@ import ExpensesFilter from "../ExpensesFilter/ExpensesFilter";
 import Card from "../UI/Card";
 import ExpenseList from "./ExpenseList";
 import "./Expenses.css";
+import ExpensesChart from "./ExpensesChart";
 
 const Expenses = (props) => {
   const [changedYear, setChangedYear] = useState(2022);
 
-  const expenseItems = props.items.filter(
+  const filteredExpenseItems = props.items.filter(
     (eachItem) =>
       eachItem.date.getFullYear().toString() === changedYear.toString()
   );
@@ -23,7 +24,8 @@ const Expenses = (props) => {
           selected={changedYear}
           onYearChange={yearChangeHandlerForExpenses}
         />
-        <ExpenseList items={expenseItems} />
+        <ExpensesChart expenses={filteredExpenseItems} />
+        <ExpenseList items={filteredExpenseItems} />
       </Card>
     </div>
   );
