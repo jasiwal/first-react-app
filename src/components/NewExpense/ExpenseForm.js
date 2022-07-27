@@ -3,8 +3,8 @@ import "./ExpenseForm.css";
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
-  const [enteredAmount, setEnteredAmount] = useState("");
-  const [enteredDate, setEnteredDate] = useState("");
+  const [enteredAmount, setEnteredAmount] = useState(0);
+  const [enteredDate, setEnteredDate] = useState(new Date());
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -23,7 +23,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: parseInt(enteredAmount),
       date: new Date(enteredDate),
     };
 
